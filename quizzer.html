@@ -60,7 +60,47 @@
 </template>
 
 <template name="quizz">
+    {{#if image1}}
+    <div id="container-quizz" class="container">
+        <div class="image-quizz1">
+            
+        </div>
+        <div class="text-quizz1">
+            
+        </div>
+        <a href='{{pathFor route='image2'}}' class="retry">
+            SUIVANTE
+        </a>
+    </div>
+    {{/if}}
     
+    {{#if image2}}
+    <div id="container-quizz" class="container">
+        <div class="image-quizz2">
+            
+        </div>
+        <div class="text-quizz2">
+            
+        </div>
+        <a href='{{pathFor route='image3'}}' class="retry">
+            SUIVANTE
+        </a>
+    </div>
+    {{/if}}
+    
+    {{#if image3}}
+    <div id="container-quizz" class="container">
+        <div class="image-quizz3">
+            
+        </div>
+        <div class="text-quizz3">
+            
+        </div>
+        <a href='{{pathFor route='fin'}}' class="retry">
+            SUIVANTE
+        </a>
+    </div>
+    {{/if}}
 </template>
 
 <template name="erreur">
@@ -117,7 +157,7 @@
             
         </div>
         <a href='{{pathFor route='image2'}}' class="retry">
-            REESAYER
+            SUIVANTE
         </a>
     </div>
     {{/if}}
@@ -131,8 +171,7 @@
             
         </div>
         <a href='{{pathFor route='image3'}}' class="retry">
-            REESAYER
-        </a>
+            SUIVANTE
     </div>
     {{/if}}
     
@@ -145,7 +184,7 @@
             
         </div>
         <a href='{{pathFor route='fin'}}' class="retry">
-            REESAYER
+            SUIVANTE
         </a>
     </div>
     {{/if}}

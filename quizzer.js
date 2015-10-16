@@ -54,6 +54,24 @@ if (Meteor.isClient) {
             }
         }
     });
+    
+    Template.quizz.helpers({
+        image1: function () {
+            if (numero == "1") {
+                return true;
+            }
+        },
+        image2: function () {
+            if (numero == "2") {
+                return true;
+            }
+        },
+        image3: function () {
+            if (numero == "3") {
+                return true;
+            }
+        }
+    });
 
     Template.erreur.helpers({
         image1: function () {
