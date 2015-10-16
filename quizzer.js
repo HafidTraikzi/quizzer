@@ -9,7 +9,7 @@ function timer() {
     if (count <= 0)
     {
         clearInterval(counter);
-        Router.go('/tplimg1');
+        Router.go('/quizz1');
         return;
     }
 
