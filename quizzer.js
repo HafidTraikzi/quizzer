@@ -1,7 +1,7 @@
 Quizz = new Mongo.Collection("quizz");
 
+var numero = 1;
 var count = 30;
-
 var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 
 function timer() {
