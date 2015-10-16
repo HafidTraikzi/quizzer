@@ -14,7 +14,7 @@
         <div class="text-welcome">
             <p>Le zoom sur l'actu !</p>
         </div>
-        <a href='{{pathFor route='image'}}' class="button_start">
+        <a href='{{pathFor route='image1'}}' class="button_start">
             DEMARRER
         </a>
     </div>
@@ -23,7 +23,7 @@
 <template name="image1">
 
     <div id="container-image" class="container">
-        <span id="timer"></span>
+        <span id="timer">30</span>
         <div class="text-image">
             <h1>Qu'est-ce que c'est ?</h1>
         </div>
@@ -57,77 +57,6 @@
     </div>
 </template>
  
-
-
-
-
-<template name="erreur">
-    
-    <div id="container-error" class="container">
-        <div class="image-error1">
-            
-        </div>
-        <div class="text-error1">
-            <p>T'as pas honte !</p>
-        </div>
-        <a href='{{pathFor route='image'}}' class="retry">
-            REESAYER
-        </a>
-    </div>
-</template>
-
-<template name="gagne">
-    {{#if image1}}
-    <div id="container-gagne" class="container">
-        <div class="image-gagne1">
-            
-        </div>
-        <div class="text-gagne1">
-            <p> Bravo !</p>
-        </div>
-        <a href='{{pathFor route='image'}}' class="retry">
-            SUIVANTE
-        </a>
-    </div>
-    {{/if}}
-    
-    {{#if image2}}
-    <div id="container-gagne" class="container">
-        <div class="image-gagne2">
-            
-        </div>
-        <div class="text-2">
-            
-        </div>
-        <a href='{{pathFor route='image'}}' class="retry">
-            SUIVANTE
-        </a>
-    </div>
-    {{/if}}
-    
-    {{#if image3}}
-    <div id="container-gagne" class="container">
-        <div class="image-gagne3">
-            
-        </div>
-        <div class="text-gagne3">
-            
-        </div>
-        <a href='{{pathFor route='fin'}}' class="retry">
-            SUIVANTE
-        </a>
-    </div>
-    {{/if}}
-</template>
-
-<template name="fin">
-    
-</template>
-
-
-
-
-
 <template name="quizz1">
     <div id="container-quizz" class="container">
         <div class="image-quizz1">
@@ -146,4 +75,37 @@
             SUIVANTE
         </a>
     </div>
-    </template>
+</template>
+
+<template name="erreur">
+    
+    <div id="container-error" class="container">
+        <div class="image-error1">
+            
+        </div>
+        <div class="text-error1">
+            <p>T'as pas honte !</p>
+        </div>
+        <a href='{{pathFor route='image'}}' class="retry">
+            REESAYER
+        </a>
+    </div>
+</template>
+
+<template name="gagne">
+    <div id="container-gagne" class="container">
+        <div class="image-gagne1">
+            
+        </div>
+        <div class="text-gagne1">
+            <p> Bravo !</p>
+        </div>
+        <a href='{{pathFor route='image2'}}' class="next">
+            SUIVANTE
+        </a>
+    </div>
+</template>
+
+<template name="fin">
+    
+</template>

@@ -1,19 +1,22 @@
 Quizz = new Mongo.Collection("quizz");
 
 var numero = 1;
-var count = 5;
-var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+var count = 10;
+//var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 
 function timer() {
-    count = count - 1;
-    if (count <= 0)
-    {
-        clearInterval(counter);
-        Router.go('/quizz1');
-        return;
-    }
-
-  //  $("#timer").html(count);
+    var interval = setInterval(function () {
+        count = count - 1;
+        if (count <= 0)
+        {
+            clearInterval(interval);
+            if (Router.current().route.getName() == "image1") {
+                Router.go('/quizz1');
+            }
+            return;
+        }
+    }, 1000);
+    //$("#timer").html(count);
 }
 
 if (Meteor.isClient) {
