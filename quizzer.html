@@ -1,0 +1,116 @@
+<head>
+  <title>quizzer</title>
+</head>
+
+<body>
+
+</body>
+
+<template name="accueil">
+    <div id="container-welcome" class="container">
+        <div class="welcome">
+            
+        </div>
+        <div class="text-welcome">
+            
+        </div>
+        <a href='{{pathFor route='image'}}' class="button_start">
+            DEMARRER
+        </a>
+    </div>
+</template>
+
+<template name="image">
+    {{#if image1}}
+    <div id="container-image" class="container">
+        <span class="timer">0:10</span>
+        <div class="text-image">
+            
+        </div>
+        <div class="image1">
+            
+        </div>
+    </div>
+    {{/if}}
+    
+    {{#if image2}}
+    <div id="container-image" class="container">
+        <span class="timer">0:10</span>
+        <div class="text-image">
+            
+        </div>
+        <div class="image2">
+            
+        </div>
+    </div>
+    {{/if}}
+    
+    {{#if image3}}
+    <div id="container-image" class="container">
+        <span class="timer">0:10</span>
+        <div class="text-image">
+            
+        </div>
+        <div class="image3">
+            
+        </div>
+    </div>
+    {{/if}}
+    
+</template>
+
+<template name="quizz">
+    
+</template>
+
+<template name="erreur">
+    {{#if image1}}
+    <div id="container-error" class="container">
+        <div class="image-error1">
+            
+        </div>
+        <div class="texxt-error1">
+            
+        </div>
+        <a href='{{pathFor route='image1'}}' class="retry">
+            REESAYER
+        </a>
+    </div>
+    {{/if}}
+    
+    {{#if image2}}
+    <div id="container-error" class="container">
+        <div class="image-error2">
+            
+        </div>
+        <div class="texxt-error2">
+            
+        </div>
+        <a href='{{pathFor route='image2'}}' class="retry">
+            REESAYER
+        </a>
+    </div>
+    {{/if}}
+    
+    {{#if image3}}
+    <div id="container-error" class="container">
+        <div class="image-error3">
+            
+        </div>
+        <div class="texxt-error3">
+            
+        </div>
+        <a href='{{pathFor route='image3'}}' class="retry">
+            REESAYER
+        </a>
+    </div>
+    {{/if}}
+</template>
+
+<template name="gagne">
+    
+</template>
+
+<template name="fin">
+    
+</template>
