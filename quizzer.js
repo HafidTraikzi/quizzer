@@ -83,6 +83,24 @@ if (Meteor.isClient) {
             }
        }
     });
+    
+    Template.gagne.helpers({
+       image1: function () {
+           if (numero == "1") {
+                return true;
+            }
+       },
+       image2: function () {
+           if (numero == "2") {
+                return true;
+            }
+       }, 
+       image3: function () {
+           if (numero == "3") {
+                return true;
+            }
+       }
+    });
 }
 
 if (Meteor.isServer) {

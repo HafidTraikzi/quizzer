@@ -69,7 +69,7 @@
         <div class="image-error1">
             
         </div>
-        <div class="texxt-error1">
+        <div class="text-error1">
             
         </div>
         <a href='{{pathFor route='image1'}}' class="retry">
@@ -83,7 +83,7 @@
         <div class="image-error2">
             
         </div>
-        <div class="texxt-error2">
+        <div class="text-error2">
             
         </div>
         <a href='{{pathFor route='image2'}}' class="retry">
@@ -97,7 +97,7 @@
         <div class="image-error3">
             
         </div>
-        <div class="texxt-error3">
+        <div class="text-error3">
             
         </div>
         <a href='{{pathFor route='image3'}}' class="retry">
@@ -108,7 +108,47 @@
 </template>
 
 <template name="gagne">
+    {{#if image1}}
+    <div id="container-gagne" class="container">
+        <div class="image-gagne1">
+            
+        </div>
+        <div class="text-gagne1">
+            
+        </div>
+        <a href='{{pathFor route='image2'}}' class="retry">
+            REESAYER
+        </a>
+    </div>
+    {{/if}}
     
+    {{#if image2}}
+    <div id="container-gagne" class="container">
+        <div class="image-gagne2">
+            
+        </div>
+        <div class="text-2">
+            
+        </div>
+        <a href='{{pathFor route='image3'}}' class="retry">
+            REESAYER
+        </a>
+    </div>
+    {{/if}}
+    
+    {{#if image3}}
+    <div id="container-gagne" class="container">
+        <div class="image-gagne3">
+            
+        </div>
+        <div class="text-gagne3">
+            
+        </div>
+        <a href='{{pathFor route='fin'}}' class="retry">
+            REESAYER
+        </a>
+    </div>
+    {{/if}}
 </template>
 
 <template name="fin">
