@@ -20,131 +20,60 @@
     </div>
 </template>
 
-<template name="image">
-    {{#if image1}}
+<template name="image1">
+
     <div id="container-image" class="container">
         <span id="timer"></span>
         <div class="text-image">
-            <p>Qu'est-ce que c'est ?</p>
+            <h1>Qu'est-ce que c'est ?</h1>
         </div>
         <div class="image1">
             
         </div>
     </div>
-    {{/if}}
-    
-    {{#if image2}}
+</template>
+<template name="image2">
+
     <div id="container-image" class="container">
         <span id="timer"></span>
         <div class="text-image">
-            
+            <h1>Qu'est-ce que c'est ?</h1>
         </div>
         <div class="image2">
             
         </div>
     </div>
-    {{/if}}
-    
-    {{#if image3}}
+</template>
+<template name="image3">
+
     <div id="container-image" class="container">
         <span id="timer"></span>
         <div class="text-image">
-            
+            <h1>Qu'est-ce que c'est ?</h1>
         </div>
         <div class="image3">
             
         </div>
     </div>
-    {{/if}}
-    
 </template>
+ 
 
-<template name="quizz">
-    {{#if image1}}
-    <div id="container-quizz" class="container">
-        <div class="image-quizz1">
-            
-        </div>
-        <div class="text-quizz1">
-            
-        </div>
-        <a href='{{pathFor route='image'}}' class="retry">
-            SUIVANTE
-        </a>
-    </div>
-    {{/if}}
-    
-    {{#if image2}}
-    <div id="container-quizz" class="container">
-        <div class="image-quizz2">
-            
-        </div>
-        <div class="text-quizz2">
-            
-        </div>
-        <a href='{{pathFor route='image'}}' class="retry">
-            SUIVANTE
-        </a>
-    </div>
-    {{/if}}
-    
-    {{#if image3}}
-    <div id="container-quizz" class="container">
-        <div class="image-quizz3">
-            
-        </div>
-        <div class="text-quizz3">
-            
-        </div>
-        <a href='{{pathFor route='fin'}}' class="retry">
-            SUIVANTE
-        </a>
-    </div>
-    {{/if}}
-</template>
+
+
 
 <template name="erreur">
-    {{#if image1}}
+    
     <div id="container-error" class="container">
         <div class="image-error1">
             
         </div>
         <div class="text-error1">
-            
+            <p>T'as pas honte !</p>
         </div>
         <a href='{{pathFor route='image'}}' class="retry">
             REESAYER
         </a>
     </div>
-    {{/if}}
-    
-    {{#if image2}}
-    <div id="container-error" class="container">
-        <div class="image-error2">
-            
-        </div>
-        <div class="text-error2">
-            
-        </div>
-        <a href='{{pathFor route='image'}}' class="retry">
-            REESAYER
-        </a>
-    </div>
-    {{/if}}
-    
-    {{#if image3}}
-    <div id="container-error" class="container">
-        <div class="image-error3">
-            
-        </div>
-        <div class="text-error3">
-            
-        </div>
-        <a href='{{pathFor route='image'}}' class="retry">
-            REESAYER
-        </a>
-    </div>
-    {{/if}}
 </template>
 
 <template name="gagne">
@@ -154,7 +83,7 @@
             
         </div>
         <div class="text-gagne1">
-            
+            <p> Bravo !</p>
         </div>
         <a href='{{pathFor route='image'}}' class="retry">
             SUIVANTE
@@ -194,3 +123,27 @@
 <template name="fin">
     
 </template>
+
+
+
+
+
+<template name="quizz1">
+    <div id="container-quizz" class="container">
+        <div class="image-quizz1">
+            
+        </div>
+        <div class="text-quizz1">
+            <form>
+            <h2>Qu'est-ce que c'est?</h2>
+            <input type="radio" name="reponse" value="false"> - Les championnats du monde de cache-cache au Cachemire
+            <input type="radio" name="reponse" value="false"> - L'élection de Miss Moutarde à Dijon 
+            <input type="radio" name="reponse" class="true" value="true"> - Une journée de fête à Jakarta
+                
+            </form>
+        </div>
+        <a href='#' class="next">
+            SUIVANTE
+        </a>
+    </div>
+    </template>
