@@ -1,10 +1,11 @@
 Quizz = new Mongo.Collection("quizz");
 
 var numero = 1;
-var count = 10;
+var count = 5;
 //var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 
 function timer() {
+
     var interval = setInterval(function () {
         count = count - 1;
         if (count <= 0)
@@ -17,6 +18,7 @@ function timer() {
         }
     }, 1000);
     //$("#timer").html(count);
+
 }
 
 if (Meteor.isClient) {
@@ -40,12 +42,82 @@ if (Meteor.isClient) {
         timer();
     }
 
+    Template.image1.helpers({
+        image1: function () {
+            if (numero == "1") {
+                return true;
+            }
+        },
+        image2: function () {
+            if (numero == "2") {
+                return true;
+            }
+        },
+        image3: function () {
+            if (numero == "3") {
+                return true;
+            }
+        }
+    });
+    
+    Template.quizz1.helpers({
+        image1: function () {
+            if (numero == "1") {
+                return true;
+            }
+        },
+        image2: function () {
+            if (numero == "2") {
+                return true;
+            }
+        },
+        image3: function () {
+            if (numero == "3") {
+                return true;
+            }
+        }
+    });
 
+    Template.erreur.helpers({
+        image1: function () {
+            if (numero == "1") {
+                return true;
+            }
+        },
+        image2: function () {
+            if (numero == "2") {
+                return true;
+            }
+        },
+        image3: function () {
+            if (numero == "3") {
+                return true;
+            }
+        }
+    });
+
+    Template.gagne.helpers({
+        image1: function () {
+            if (numero == "1") {
+                return true;
+            }
+        },
+        image2: function () {
+            if (numero == "2") {
+                return true;
+            }
+        },
+        image3: function () {
+            if (numero == "3") {
+                return true;
+            }
+        }
+    });
 
     Template.quizz1.events({
        "click a.next": function(e){
                 console.log($(".true").is(':checked'));
-
+e.preventDefault();
         if($(".true").is(':checked')){
             Router.go('/gagne');
 
