@@ -13,7 +13,7 @@ function timer() {
         return;
     }
 
-    document.getElementById("timer").innerHTML = count;
+    $("#timer").html(count);
 }
 
 if (Meteor.isClient) {
