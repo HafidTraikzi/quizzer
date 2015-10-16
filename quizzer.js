@@ -22,96 +22,22 @@ if (Meteor.isClient) {
     Router.route('/', {
         template: 'accueil'
     });
-    Router.route('/image',{
-        template: 'image'+numero
-     });
-    Router.route('/quizz',{
-        template: 'quizz'+numero
-     });
+    Router.route('/image1');
+    Router.route('/quizz1');
 
     Router.route('/erreur');
     Router.route('/gagne');
 
     Router.route('/fin');
 
-    Template.image.rendered = function () {
+    Template.image1.rendered = function () {
         if (!this._rendered) {
             this._rendered = true;
         }
         timer();
     }
 
-    Template.image.helpers({
-        image1: function () {
-            if (numero == "1") {
-                return true;
-            }
-        },
-        image2: function () {
-            if (numero == "2") {
-                return true;
-            }
-        },
-        image3: function () {
-            if (numero == "3") {
-                return true;
-            }
-        }
-    });
-    
-    Template.quizz.helpers({
-        image1: function () {
-            if (numero == "1") {
-                return true;
-            }
-        },
-        image2: function () {
-            if (numero == "2") {
-                return true;
-            }
-        },
-        image3: function () {
-            if (numero == "3") {
-                return true;
-            }
-        }
-    });
 
-    Template.erreur.helpers({
-        image1: function () {
-            if (numero == "1") {
-                return true;
-            }
-        },
-        image2: function () {
-            if (numero == "2") {
-                return true;
-            }
-        },
-        image3: function () {
-            if (numero == "3") {
-                return true;
-            }
-        }
-    });
-
-    Template.gagne.helpers({
-        image1: function () {
-            if (numero == "1") {
-                return true;
-            }
-        },
-        image2: function () {
-            if (numero == "2") {
-                return true;
-            }
-        },
-        image3: function () {
-            if (numero == "3") {
-                return true;
-            }
-        }
-    });
 
     Template.quizz1.events({
        "click a.next": function(e){
